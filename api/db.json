@@ -1,0 +1,95 @@
+{
+  "streams": [
+    {
+      "id": 1,
+      "title": "My Stream",
+      "description": "This is a great stream.",
+      "todoId": []
+    },
+    {
+      "id": 2,
+      "title": "Othern Stream",
+      "description": "Here's some stream.",
+      "todoId": []
+    },
+    {
+      "title": "good job!",
+      "description": "uraaaasfdsa",
+      "userId": "108962899095233287727",
+      "id": 3,
+      "todoId": []
+    },
+    {
+      "title": "Unexpected Behavior",
+      "description": "Didn't expect that!",
+      "userId": "108962899095233287727",
+      "id": 4,
+      "todoId": []
+    },
+    {
+      "title": "good job!",
+      "description": "uraaaasfdsa",
+      "userId": "108962899095233287727",
+      "id": 5,
+      "todoId": []
+    },
+    {
+      "title": "Me streaming component reuse!",
+      "description": "Watch me refactor some components",
+      "userId": "108962899095233287727",
+      "id": 6,
+      "todoId": []
+    },
+    {
+      "title": "asdfasdffdsasdfasdfsdaf",
+      "description": "rtyu",
+      "userId": "108962899095233287727",
+      "id": 7,
+      "todoId": []
+    },
+    {
+      "title": "sdfv",
+      "description": "asf",
+      "userId": "108962899095233287727",
+      "id": 8
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learn React",
+      "description": "Learn React and UI Fabrick",
+      "url": "https://reactjs.org/"
+    },
+    {
+      "id": 2,
+      "title": "Learn Azure",
+      "description": "Learn Azure",
+      "url": "https://docs.microsoft.com/en-us/learn/azure/"
+    },
+    {
+      "id": 3,
+      "title": "Learn EF",
+      "description": "Learn Entity Framework",
+      "url": "https://docs.microsoft.com/en-us/ef/"
+    },
+    {
+      "id": 4,
+      "title": "Learn Angular",
+      "description": "Learn Angular 7",
+      "url": "https://angular.io/"
+    },
+    {
+      "id": 5,
+      "title": "Learn .net core",
+      "description": "Learn .net core",
+      "url": "https://dotnet.microsoft.com/"
+    },
+    {
+      "id": 6,
+      "title": "Learn C#",
+      "description": "Learn C#",
+      "url": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+    }
+  ]
+}
