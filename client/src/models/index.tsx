@@ -72,3 +72,8 @@ export interface ITodo {
     description: string;
     url: string;
 }
+
+export enum ModelType {
+    Trainee = "Trainee",
+    Todo = "Todo",
+}

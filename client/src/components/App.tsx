@@ -9,20 +9,22 @@ import Contact from './streams/contact/Contact';
 import NewStreamList from "./streams/new/NewStreamList";
 import { connect } from "react-redux";
 import StreamsShow from "./StreamsShow";
+import { mergeStyleSets } from "@uifabric/merge-styles";
+import CompoundList from "./streams/new/CompoundTraineeList";
 
 
 class App extends React.Component<any> {
     
     render() {
-        console.log("App, mapStateToProps", this.props)
         return (
-            <div className="ui container">
+            <div className={appStyle.container}>
                 <Router history={history}>
                     <div>
                         <Header isSigned={this.props.isSigned} />
                         <Switch>
                             <Route path="/" exact component={StreamsShow} />
                             <Route path="/streams" exact component={NewStreamList} />
+                            <Route path="/streams/compound" exact component={CompoundList} />
                             <Route path="/streams/edit/:id" exact component={StreamEdit} />
                             <Route path="/streams/delete/:id" exact component={StreamDelete} />
                             <Route path="/streams/:id" exact component={StreamShow} />
@@ -40,3 +42,11 @@ const mapStateToProps = (state: any) => {
 }
 
 export default connect(mapStateToProps, { })(App);
+
+const appStyle = mergeStyleSets({
+        container: {
+            minWidth: "320px",
+            maxWidth: "1150px",
+            margin: "auto",
+        }
+});

@@ -7,40 +7,41 @@ import { PrimaryButton, initializeIcons } from "office-ui-fabric-react";
 initializeIcons();
 
 class GoogleAuth extends Component<any, IGoogleAuth> {
-    auth: any;
+    auth2: any;
 
     componentDidMount(){
+
         window.gapi.load("client:auth2", () => {
             window.gapi.client.init({
-                clientId: "1054073046884-nvav73eup9iutlk1gujpngrpq7a2ltfm.apps.googleusercontent.com",
+                clientId: "764636850491-403a313mlpt3khbe7trscr59j1d48ie0.apps.googleusercontent.com",
                 scope: "email"
             }).then(() => {
-                this.auth = window.gapi.auth2.getAuthInstance();
-                this.onAuthChange(this.auth.isSignedIn.get());
-                this.auth.isSignedIn.listen(this.onAuthChange);
+                this.auth2 = window.gapi.auth2.getAuthInstance();
+                this.onAuthChange(this.auth2.isSignedIn.get());
+                this.auth2.isSignedIn.listen(this.onAuthChange);
             });
         });
     }
 
     onAuthChange = (isSignedIn: any) => {
         if (isSignedIn) {
-            this.props.signIn(this.auth.currentUser.get().getId());
+            this.props.signIn(this.auth2.currentUser.get().getId());
         } else {
             this.props.signOut();
         }
     }
 
     onSignInClick = () => {
-        this.auth.signIn();
+        this.auth2.signIn();
     }
 
     onSignOutClick = () => {
-        this.auth.signOut();
+        this.auth2.signOut();
     }
 
     renderAuthButton() {
         if (this.props.isSignedIn === null) {
-            return <div>I don't know if we are signed in</div> 
+            return <PrimaryButton>I don't know if we are signed in</PrimaryButton> 
         } else if (this.props.isSignedIn) {
             return (
                 <PrimaryButton onClick={this.onSignOutClick} >

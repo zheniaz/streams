@@ -289,7 +289,7 @@ const contactStyles = {
     root: [
         {
             height: 90,
-            width: 300
+            width: "20%",
         }
     ]
 }

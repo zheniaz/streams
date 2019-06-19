@@ -8,13 +8,6 @@ import {
 import _ from "lodash";
 import { IAction } from "../models";
 
-const INITIAL_STATE = {
-    description: "",
-    id: 0,
-    title: "",
-    userId: 0
-}
-
 export default (state: any = {}, action: IAction) => {
     switch (action.type) {
         case FETCH_STREAMS:
